@@ -22,6 +22,8 @@ jobs:
         run: |
           dotnet restore
           dotnet build
+        working-directory: ./Project
 
       - name: Run Unit Tests
         run: dotnet test
+        working-directory: ./UnitTests
