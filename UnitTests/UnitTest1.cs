@@ -8,8 +8,6 @@ public class UnitTest1
     [Theory]
     [InlineData("Hello", 3, "S2hvb3I=")] // a2hvb3I=
     [InlineData("webapi", 5, "YmpnZnVu")]
-    //Input: hello, Encrypted: khoor
-    // Input: webapi, Encrypted: bjgfun
     public void EncryptStringToBytes_ShouldEncryptCorrectly(string input, int shift, string expected)
     {
         // Arrange
