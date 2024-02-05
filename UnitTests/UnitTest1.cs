@@ -9,10 +9,10 @@ namespace UnitTest;
 // flyttade filer
 
 /**
-To run the tests you need to start up the main project, in the terminal to message_encryption run: dotnet run
+To run the tests you need to start up the main project, in the terminal to Project file run: dotnet run
 See which localhost server is opened and update BaseAddress to the right one (line 26)
 ex. BaseAddress = new Uri("http://localhost:5242")
-In the terminal to UnitTest run: dotnet test
+In the terminal to UnitTest file run: dotnet test
 **/
 
 public class UnitTest1
@@ -32,9 +32,6 @@ public class UnitTest1
     [Fact]
     public async Task EncryptMessage_ShouldReturnEncryptedString()
     {
-        // Arrange
-        // You can set up any additional arrangements here if needed
-
         // Act
         var response = await _client.GetAsync("/encrypt/hello/3");
         var result = await response.Content.ReadAsStringAsync();
