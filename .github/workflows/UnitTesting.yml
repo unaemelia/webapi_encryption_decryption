@@ -13,12 +13,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Use local project
-        uses: ./Project
-
-      - name: Use local unit test
-        uses: ./UnitTests
-
       - name: Set up .NET
         uses: actions/setup-dotnet@v3
         with:
@@ -28,6 +22,8 @@ jobs:
         run: |
           dotnet restore
           dotnet build
+        working-directory: ./Project
 
       - name: Run Unit Tests
         run: dotnet test
+        working-directory: ./UnitTests
