@@ -13,6 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Use local project
+        uses: ./Project
+
+      - name: Use local unit test
+        uses: ./UnitTests
+
       - name: Set up .NET
         uses: actions/setup-dotnet@v3
         with:
