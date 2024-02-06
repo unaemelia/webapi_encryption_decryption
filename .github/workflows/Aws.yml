@@ -2,7 +2,7 @@ name: Build and push to AWS
 
 on:
   push:
-    branches-ignore:
+    branches:
       - main
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
         working-directory: ./Project
 
       - name: Create zip package
-        run: cd site; zip ../Project/site.zip *;
+        run: cd site; zip ../site.zip *;
 
       - name: Deploy to aws EB
         uses: einaregilsson/beanstalk-deploy@v21
