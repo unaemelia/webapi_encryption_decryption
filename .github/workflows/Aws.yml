@@ -1,4 +1,4 @@
-name: Build and push to aws
+name: Build and push to AWS
 
 on:
   push:
@@ -19,9 +19,7 @@ jobs:
           dotnet-version: '6.x'
 
       - name: Restore and build
-        run: |
-          dotnet restore
-          dotnet publish -o site
+        run: dotnet restore; dotnet publish -o site
         working-directory: ./Project
 
       - name: Create zip package
