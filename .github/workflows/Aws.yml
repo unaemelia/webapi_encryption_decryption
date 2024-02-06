@@ -1,4 +1,4 @@
-name: Build and push to aws
+name: Build and push to AWS
 
 on:
   push:
