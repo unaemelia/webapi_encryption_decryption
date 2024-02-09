@@ -13,7 +13,7 @@ This project is an ASP.NET Web API that provides two endpoints for encrypting an
 
 ## Usage
 
-To encrypt a message, make a `GET` request to the `/encrypt/{message}/{shift}` endpoint, replacing `{message}` with the message to be encrypted and `{shift}` with the desired shift value (numeric value). The encrypted message will be returned in Base64 format.
+Go to [Elastic Beanstalk](http://encryptdecryptapi-env.eba-46hzntxn.eu-north-1.elasticbeanstalk.com). To encrypt a message, make a `GET` request to the `/encrypt/{message}/{shift}` endpoint, replacing `{message}` with the message to be encrypted and `{shift}` with the desired shift value (numeric value). The encrypted message will be returned in Base64 format.
 
 Example:
 ```cs
